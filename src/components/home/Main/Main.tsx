@@ -11,11 +11,7 @@ function Main() {
     <>
       <main css={{ padding: '100px' }}>
         this is main page before user loggedin
-        <UiComponent.Divider
-          variant="dashed"
-          color={theme.color.primary.blue100}
-          css={{ margin: '0 auto', marginTop: '10px' }}
-        />
+        <UiComponent.Divider color={theme.color.primary.blue200} css={{ margin: '0 auto', marginTop: '10px' }} />
       </main>
       {isLoading && <UiComponent.Loading />}
     </>

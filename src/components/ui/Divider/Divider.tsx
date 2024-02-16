@@ -1,6 +1,12 @@
 import * as React from 'react';
 import { Interpolation, Theme } from '@emotion/react';
-import { DividerOrientationType, DividerVariantType, DividerThicknessType, DividerSizeType } from 'types';
+import {
+  DividerOrientationType,
+  DividerVariantType,
+  DividerThicknessType,
+  DividerSizeType,
+  ColorValueType,
+} from 'types';
 import { borderStyle } from './style';
 
 interface Props extends React.HTMLAttributes<HTMLHRElement> {
@@ -8,7 +14,7 @@ interface Props extends React.HTMLAttributes<HTMLHRElement> {
   variant?: DividerVariantType;
   thickness?: DividerThicknessType;
   size?: DividerSizeType;
-  color?: string;
+  color?: ColorValueType;
   css?: Interpolation<Theme>;
 }
 
