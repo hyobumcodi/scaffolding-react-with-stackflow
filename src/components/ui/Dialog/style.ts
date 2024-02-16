@@ -14,7 +14,7 @@ const backgroundCover =
   (opacity: number, isWhite: boolean) =>
   ({
     color: {
-      gray: { gray1000, gray0 },
+      gray: { gray0, gray1000 },
     },
   }: Theme): CSSObject => ({
     background: isWhite ? gray0 : gray1000,

@@ -2,6 +2,7 @@ import React from 'react';
 
 import { useCheckSignin } from 'hooks';
 import { UiComponent } from 'components';
+import { theme } from 'styles';
 
 function Main() {
   const { isLoading } = useCheckSignin();
@@ -11,9 +12,8 @@ function Main() {
       <main css={{ padding: '100px' }}>
         this is main page before user loggedin
         <UiComponent.Divider
-          thickness="bold"
           variant="dashed"
-          color="#E7EAF2"
+          color={theme.color.primary.blue100}
           css={{ margin: '0 auto', marginTop: '10px' }}
         />
       </main>
