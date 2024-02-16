@@ -12,6 +12,11 @@ const global = css`
   pre {
     font-family: Pretendard, system-ui;
   }
+  hr {
+    height: 0;
+    margin: 0;
+    background: unset;
+  }
 `;
 
 export default global;

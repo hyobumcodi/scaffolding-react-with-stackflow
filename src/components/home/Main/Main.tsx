@@ -8,7 +8,15 @@ function Main() {
 
   return (
     <>
-      <main css={{ padding: '100px' }}>this is main page before user loggedin</main>
+      <main css={{ padding: '100px' }}>
+        this is main page before user loggedin
+        <UiComponent.Divider
+          thickness="bold"
+          variant="dashed"
+          color="#E7EAF2"
+          css={{ margin: '0 auto', marginTop: '10px' }}
+        />
+      </main>
       {isLoading && <UiComponent.Loading />}
     </>
   );
