@@ -7,7 +7,7 @@ function Base() {
   return (
     <>
       <UiComponent.Header />
-      <div css={{ marginTop: '60px' }}>
+      <div css={{ marginTop: '58px' }}>
         <Outlet />
       </div>
       {loading && <UiComponent.Loading />}

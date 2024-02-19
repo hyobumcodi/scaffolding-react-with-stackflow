@@ -2,19 +2,19 @@ import * as React from 'react';
 import { Interpolation, Theme } from '@emotion/react';
 import {
   DividerOrientationType,
-  DividerVariantType,
   DividerThicknessType,
-  DividerSizeType,
+  SizeWithPxType,
+  SizeWithPercentType,
   ColorValueType,
 } from 'types';
 import { borderStyle } from './style';
 
 interface Props extends React.HTMLAttributes<HTMLHRElement> {
   orientation?: DividerOrientationType;
-  variant?: DividerVariantType;
+  variant?: React.CSSProperties['borderColor'];
   thickness?: DividerThicknessType;
-  size?: DividerSizeType;
   color?: ColorValueType;
+  size?: SizeWithPxType | SizeWithPercentType;
   css?: Interpolation<Theme>;
 }
 

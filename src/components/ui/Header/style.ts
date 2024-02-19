@@ -13,7 +13,7 @@ const wrapper = ({
   height: '58px',
   background: gray0,
   borderBottom: `1px solid ${gray250}`,
-  padding: '0 100px',
+  padding: '0 20px',
   alignItems: 'center',
   justifyContent: 'space-between',
   zIndex: 1000,
@@ -21,9 +21,7 @@ const wrapper = ({
 
 const logoSection: CSSObject = {
   display: 'flex',
-  flexDirection: 'row',
   alignItems: 'center',
-  gap: '0 30px',
 };
 
 export { wrapper, logoSection };

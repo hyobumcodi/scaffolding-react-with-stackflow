@@ -3,9 +3,9 @@ import { Interpolation, Theme } from '@emotion/react';
 import { Player } from '@lottiefiles/react-lottie-player';
 
 import animationData from 'static/lottie/loading.json';
-import Portal from '../Portal/Portal';
-import Background from './Background';
 import useDisableScroll from 'hooks/useDisableScroll';
+import Background from './Background';
+import Portal from '../Portal/Portal';
 
 interface Props {
   css?: Interpolation<Theme>;

@@ -1,12 +1,12 @@
 import { CSSObject, Theme } from '@emotion/react';
-import { DividerOrientationType, DividerVariantType, DividerThicknessType } from 'types';
+import { DividerOrientationType, DividerThicknessType, SizeWithPercentType, SizeWithPxType } from 'types';
 
 const borderStyle =
   (
     orientation?: DividerOrientationType,
-    variant?: DividerVariantType,
+    variant?: React.CSSProperties['borderColor'],
     thickness?: DividerThicknessType,
-    size?: React.CSSProperties['width'],
+    size?: SizeWithPxType | SizeWithPercentType,
     color?: string,
   ) =>
   ({
