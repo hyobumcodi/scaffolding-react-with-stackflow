@@ -75,6 +75,7 @@ const theme = {
   },
   shadows: {
     1: '0px 3px 16px 0px rgba(0, 0, 0, 0.20)',
+    2: '0px -4px 4px rgba(0, 0, 0, 0.025)',
   },
   grids: {
     layout1: {

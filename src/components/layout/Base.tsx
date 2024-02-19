@@ -4,13 +4,12 @@ import { UiComponent } from 'components';
 
 function Base() {
   const loading = false;
+
   return (
     <>
-      <UiComponent.Header />
-      <div css={{ marginTop: '58px' }}>
-        <Outlet />
-      </div>
+      <Outlet />
       {loading && <UiComponent.Loading />}
+      <UiComponent.NavBar />
     </>
   );
 }

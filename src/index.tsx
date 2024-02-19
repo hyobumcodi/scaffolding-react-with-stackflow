@@ -1,4 +1,5 @@
 import './styles/font.css';
+import '@stackflow/plugin-basic-ui/index.css';
 
 import React from 'react';
 import ReactDOM from 'react-dom/client';

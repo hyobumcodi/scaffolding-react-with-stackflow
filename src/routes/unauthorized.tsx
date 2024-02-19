@@ -1,12 +1,19 @@
 import React from 'react';
-import { Home } from 'pages';
 import { RouteObject } from 'react-router-dom';
+
+import { Home } from 'pages';
+import { PATH } from 'data';
+import { MyTicket } from 'components/home';
 
 const unauthorizedApp: RouteObject = {
   children: [
     {
-      path: '/',
-      element: <Home />,
+      path: PATH.home,
+      element: <Home params={{}} />,
+    },
+    {
+      path: PATH.myTicket,
+      element: <MyTicket params={{}} />,
     },
   ],
 };
