@@ -30,54 +30,64 @@ const content: CSSObject = {
   height: '100%',
 };
 
-const itemWrap = ({
-  color: {
-    gray: { gray350 },
-    primary: { blue100 },
-  },
-  typography: {
-    size: { element2 },
-    weight: { semibold },
-  },
-}: Theme): CSSObject => ({
-  display: 'flex',
-  flex: 1,
-  alignItems: 'center',
-  justifyContent: 'center',
-  height: '100%',
-  textAlign: 'center',
-  fontSize: element2,
-  color: gray350,
-  boxShadow: 'none',
+const itemWrap =
+  (isActive: boolean) =>
+  ({
+    color: {
+      gray: { gray350 },
+      primary: { blue300 },
+    },
+    typography: {
+      size: { element2 },
+      weight: { semibold },
+    },
+  }: Theme): CSSObject => ({
+    display: 'flex',
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: '100%',
+    textAlign: 'center',
+    fontSize: element2,
+    color: gray350,
+    boxShadow: 'none',
 
-  '& > a': {
-    padding: '2px',
-    width: '60px',
-    textDecoration: 'none',
-    fontWeight: semibold,
-    color: 'inherit',
-    transition: 'color 0.4s',
-  },
-  'a:hover': {
-    color: 'inherit',
-    boxShadow: 'none',
-  },
-  'a.focus': {
-    color: blue100,
-    boxShadow: 'none',
-  },
-  'a div': {
-    marginTop: '4px',
-  },
-  'a img': {
-    margin: '1px auto',
-  },
-  'a img + img, a.focus img:first-of-type': {
-    display: 'none',
-  },
-  'a.focus img + img': {
-    display: 'block',
-  },
-});
+    '& > button': {
+      padding: '2px',
+      width: '60px',
+      textDecoration: 'none',
+      fontWeight: semibold,
+      color: 'inherit',
+      transition: 'color 0.4s',
+
+      '& > div > svg': {
+        '& > path, & > rect': {
+          fill: isActive ? blue300 : gray350,
+        },
+      },
+    },
+    'button:focus': {
+      color: blue300,
+      boxShadow: 'none',
+    },
+    'button span': {
+      marginTop: '4px',
+    },
+    'button div': {
+      margin: '1px auto',
+    },
+  });
 
 export { wrap, shadowWrap, content, itemWrap };
+
+// css={css`
+// & > svg > path {
+//   fill: ${activeTab === href ? 'red' : 'green'};
+//   stroke: ${activeTab === href ? 'red' : 'green'};
+// }
+
+// & > svg > rect {
+//   fill: ${activeTab === href ? 'red' : 'green'};
+//   stroke: ${activeTab === href ? 'red' : 'green'};
+// }
+// `}

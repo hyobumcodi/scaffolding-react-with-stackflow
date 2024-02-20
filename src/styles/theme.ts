@@ -12,6 +12,7 @@ const theme = {
     primary: {
       blue100: '#3da4ff',
       blue200: '#6396ff',
+      blue300: '#004FEC',
     },
     error: {
       red200: '#FFEBED',

@@ -8,7 +8,7 @@ const RegisterCenter = () => {
   return (
     <Layout
       appBar={{
-        height: '0px',
+        title: '센터 등록',
       }}
     >
       <div css={wrapper}>

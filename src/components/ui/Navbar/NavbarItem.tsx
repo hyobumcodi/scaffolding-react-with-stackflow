@@ -1,24 +1,29 @@
+import { Interpolation, Theme } from '@emotion/react';
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { TypeActivities } from 'stackflow';
+import { KeyOf } from 'types/utility-types/KeyOf';
 import { itemWrap } from './style';
 
 interface TabItemProps {
-  href: string;
+  activeTab: KeyOf<TypeActivities>;
+  href: KeyOf<TypeActivities>;
   label: string;
-  icons: {
-    default: string;
-    active: string;
+  Icon: React.FC<{
+    onClick?: VoidFunction | undefined;
+    css?: Interpolation<Theme>;
+  }>;
+  replace: (tab: KeyOf<TypeActivities>) => {
+    activityId: string;
   };
 }
 
-const TabItem: React.FC<TabItemProps> = ({ href, icons, label }) => {
+const TabItem: React.FC<TabItemProps> = ({ activeTab, href, Icon, label, replace }) => {
   return (
-    <div css={itemWrap}>
-      <NavLink to={href} className={({ isActive }) => (isActive ? 'focus' : '')}>
-        <img src={icons.default} />
-        <img src={icons.active} />
-        <div>{label}</div>
-      </NavLink>
+    <div css={itemWrap(activeTab === href)}>
+      <button onClick={() => replace(href)}>
+        <Icon />
+        <span>{label}</span>
+      </button>
     </div>
   );
 };

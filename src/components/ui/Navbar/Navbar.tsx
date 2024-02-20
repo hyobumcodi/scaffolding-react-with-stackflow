@@ -3,14 +3,32 @@ import React from 'react';
 import TabItem from './NavbarItem';
 import { BOTTOM_NAVBAR_LIST } from 'data';
 import { content, shadowWrap, wrap } from './style';
+import { KeyOf } from 'types/utility-types/KeyOf';
+import { TypeActivities } from 'stackflow';
 
-const BottomNavbar = () => {
+interface BottomNavbarProps {
+  activeTab: KeyOf<TypeActivities>;
+  replace: (tab: KeyOf<TypeActivities>) => {
+    activityId: string;
+  };
+}
+
+const BottomNavbar = ({ activeTab, replace }: BottomNavbarProps) => {
   return (
     <nav css={wrap}>
       <div css={shadowWrap}>
         <div css={content}>
           {BOTTOM_NAVBAR_LIST.map((item, index) => {
-            return <TabItem key={index} href={item?.href} icons={item?.icons} label={item?.label} />;
+            return (
+              <TabItem
+                key={index}
+                activeTab={activeTab}
+                href={item?.href as KeyOf<TypeActivities>}
+                Icon={item?.Icon}
+                label={item?.label}
+                replace={replace}
+              />
+            );
           })}
         </div>
       </div>
