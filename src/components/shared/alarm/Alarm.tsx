@@ -2,7 +2,6 @@ import React from 'react';
 import { ActivityComponentType } from '@stackflow/react';
 
 import { Layout } from 'components/layout';
-import { wrapper, scrollable } from './style';
 
 const Alarm: ActivityComponentType = () => {
   return (
@@ -11,9 +10,7 @@ const Alarm: ActivityComponentType = () => {
         title: '알림',
       }}
     >
-      <div css={wrapper}>
-        <div css={scrollable}>Hello this is Alarm Screen</div>
-      </div>
+      <div>Hello this is Alarm Screen</div>
     </Layout>
   );
 };

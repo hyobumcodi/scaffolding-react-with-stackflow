@@ -24,7 +24,7 @@ const withDefaultAppBar = () => {
 
   return {
     replace,
-    render: {
+    defaultAppBar: {
       renderLeft: appBarLeft,
       renderRight: appBarRight,
     },

@@ -96,6 +96,12 @@ const theme = {
       width: '50%',
     },
   },
+  size: {
+    height: {
+      header: '58px',
+      navbar: '64px',
+    },
+  },
 } as const;
 
 export default theme;

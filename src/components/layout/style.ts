@@ -21,13 +21,17 @@ const right: CSSObject = {
   marginRight: '8px',
 };
 
-const scrollable: CSSObject[] = [
+const scrollable = [
   f.flex1,
   f.overflowScroll,
-  {
-    paddingTop: '56px',
-    paddingBottom: '64px',
-  },
+  ({
+    size: {
+      height: { header, navbar },
+    },
+  }: Theme): CSSObject => ({
+    paddingTop: header,
+    paddingBottom: navbar,
+  }),
 ];
 
 export { wrapper, left, right, scrollable };

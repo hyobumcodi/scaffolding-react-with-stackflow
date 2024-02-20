@@ -1,7 +1,4 @@
 import { CSSObject, Theme } from '@emotion/react';
-import { f } from 'styles';
-
-const wrapper = [f.posAbsFull, f.flexColumn, f.rootLineHeight];
 
 const title = ({
   typography: {
@@ -24,13 +21,4 @@ const right: CSSObject = {
   marginRight: '8px',
 };
 
-const scrollable: CSSObject[] = [
-  f.flex1,
-  f.overflowScroll,
-  {
-    paddingTop: '56px',
-    paddingBottom: '64px',
-  },
-];
-
-export { wrapper, title, left, right, scrollable };
+export { title, left, right };

@@ -4,6 +4,7 @@ import { UiComponent } from 'components';
 import { KeyOf } from 'types/utility-types/KeyOf';
 import { TypeActivities } from 'stackflow';
 import withDefaultAppBar from './withDefaultAppBar';
+import { scrollable, wrapper } from './style';
 
 type PropOf<T> = T extends React.ComponentType<infer U> ? U : never;
 
@@ -14,13 +15,15 @@ interface LayoutProps {
 }
 
 const Layout: React.FC<LayoutProps> = ({ activeTab, appBar, children }) => {
-  const { replace, render } = withDefaultAppBar();
-  const navigatorReplace = useCallback((tab: KeyOf<TypeActivities>) => replace(tab, {}, { animate: false }), []);
+  const { replace, defaultAppBar } = withDefaultAppBar();
+  const navigate = useCallback((tab: KeyOf<TypeActivities>) => replace(tab, {}, { animate: false }), []);
 
   return (
-    <AppScreen appBar={appBar || render}>
-      {children}
-      {activeTab && <UiComponent.NavBar activeTab={activeTab} replace={navigatorReplace} />}
+    <AppScreen appBar={appBar || defaultAppBar}>
+      <div css={wrapper}>
+        <div css={scrollable}>{children}</div>
+      </div>
+      {activeTab && <UiComponent.NavBar activeTab={activeTab} replace={navigate} />}
     </AppScreen>
   );
 };

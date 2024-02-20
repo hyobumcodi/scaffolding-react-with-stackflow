@@ -1,6 +1,6 @@
-import { Interpolation, Theme } from '@emotion/react';
 import React from 'react';
 import { TypeActivities } from 'stackflow';
+import { IconType } from 'types';
 import { KeyOf } from 'types/utility-types/KeyOf';
 import { itemWrap } from './style';
 
@@ -8,10 +8,7 @@ interface TabItemProps {
   activeTab: KeyOf<TypeActivities>;
   href: KeyOf<TypeActivities>;
   label: string;
-  Icon: React.FC<{
-    onClick?: VoidFunction | undefined;
-    css?: Interpolation<Theme>;
-  }>;
+  Icon: IconType;
   replace: (tab: KeyOf<TypeActivities>) => {
     activityId: string;
   };

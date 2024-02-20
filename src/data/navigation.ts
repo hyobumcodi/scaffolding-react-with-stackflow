@@ -30,6 +30,6 @@ const BOTTOM_NAVBAR_LIST = [
     Icon: Schedule,
     label: '스케줄',
   },
-];
+] as const;
 
 export { BOTTOM_NAVBAR_LIST };
