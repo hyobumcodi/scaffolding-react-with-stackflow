@@ -57,7 +57,7 @@ const itemWrap =
       width: '60px',
       textDecoration: 'none',
       fontWeight: semibold,
-      color: 'inherit',
+      color: isActive ? blue300 : 'inherit',
       transition: 'color 0.4s',
 
       '& > div > svg': {

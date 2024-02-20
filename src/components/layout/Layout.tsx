@@ -1,8 +1,8 @@
-import React, { useCallback } from 'react';
+import React from 'react';
 import { AppScreen } from '@stackflow/plugin-basic-ui';
 import { UiComponent } from 'components';
-import { KeyOf } from 'types/utility-types/KeyOf';
 import { TypeActivities } from 'stackflow';
+import { KeyOf, Nullable } from 'types/utility-types';
 import withDefaultAppBar from './withDefaultAppBar';
 import { scrollable, wrapper } from './style';
 
@@ -16,14 +16,19 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ activeTab, appBar, children }) => {
   const { replace, defaultAppBar } = withDefaultAppBar();
-  const navigate = useCallback((tab: KeyOf<TypeActivities>) => replace(tab, {}, { animate: false }), []);
+  const navigate = React.useCallback((tab: KeyOf<TypeActivities>) => replace(tab, {}, { animate: false }), []);
+
+  const topEl = React.useRef<Nullable<HTMLDivElement>>(null);
+  const scrollToTop = () => topEl?.current?.scrollTo({ top: 0, behavior: 'smooth' });
 
   return (
     <AppScreen appBar={appBar || defaultAppBar}>
       <div css={wrapper}>
-        <div css={scrollable}>{children}</div>
+        <div ref={topEl} css={scrollable(Boolean(activeTab))}>
+          {children}
+        </div>
       </div>
-      {activeTab && <UiComponent.NavBar activeTab={activeTab} replace={navigate} />}
+      {activeTab && <UiComponent.NavBar activeTab={activeTab} replace={navigate} scrollToTop={scrollToTop} />}
     </AppScreen>
   );
 };

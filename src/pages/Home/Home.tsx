@@ -12,6 +12,22 @@ const Home: ActivityComponentType = () => {
     <Layout activeTab={'Home'}>
       {auth?.token.accessToken ? <HomeComponent.Dashboard /> : <HomeComponent.Landing />}
       <UiComponent.Footer />
+      <UiComponent.Footer />
+      <UiComponent.Footer />
+      <UiComponent.Footer />
+      <UiComponent.Footer />
+      <UiComponent.Footer />
+      <UiComponent.Footer />
+      <UiComponent.Footer />
+      <UiComponent.Footer />
+      <UiComponent.Footer />
+      <UiComponent.Footer />
+      <UiComponent.Footer />
+      <UiComponent.Footer />
+      <UiComponent.Footer />
+      <UiComponent.Footer />
+      <UiComponent.Footer />
+      <UiComponent.Footer />
     </Layout>
   );
 };

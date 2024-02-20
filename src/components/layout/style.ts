@@ -21,7 +21,7 @@ const right: CSSObject = {
   marginRight: '8px',
 };
 
-const scrollable = [
+const scrollable = (hasNavbar: boolean) => [
   f.flex1,
   f.overflowScroll,
   ({
@@ -30,7 +30,7 @@ const scrollable = [
     },
   }: Theme): CSSObject => ({
     paddingTop: header,
-    paddingBottom: navbar,
+    paddingBottom: hasNavbar ? navbar : 0,
   }),
 ];
 

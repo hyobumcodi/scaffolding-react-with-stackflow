@@ -11,9 +11,10 @@ interface BottomNavbarProps {
   replace: (tab: KeyOf<TypeActivities>) => {
     activityId: string;
   };
+  scrollToTop: VoidFunction;
 }
 
-const BottomNavbar = ({ activeTab, replace }: BottomNavbarProps) => {
+const BottomNavbar = ({ activeTab, replace, scrollToTop }: BottomNavbarProps) => {
   return (
     <nav css={wrap}>
       <div css={shadowWrap}>
@@ -27,6 +28,7 @@ const BottomNavbar = ({ activeTab, replace }: BottomNavbarProps) => {
                 Icon={item?.Icon}
                 label={item?.label}
                 replace={replace}
+                scrollToTop={scrollToTop}
               />
             );
           })}

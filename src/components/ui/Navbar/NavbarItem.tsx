@@ -12,12 +12,19 @@ interface TabItemProps {
   replace: (tab: KeyOf<TypeActivities>) => {
     activityId: string;
   };
+  scrollToTop: VoidFunction;
 }
 
-const TabItem: React.FC<TabItemProps> = ({ activeTab, href, Icon, label, replace }) => {
+const TabItem: React.FC<TabItemProps> = ({ activeTab, href, Icon, label, replace, scrollToTop }) => {
+  const isActive = activeTab === href;
+  const handleTabClick = () => {
+    if (isActive) scrollToTop();
+    else replace(href);
+  };
+
   return (
     <div css={itemWrap(activeTab === href)}>
-      <button onClick={() => replace(href)}>
+      <button onClick={handleTabClick}>
         <Icon />
         <span>{label}</span>
       </button>

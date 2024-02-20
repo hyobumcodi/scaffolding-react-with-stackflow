@@ -99,6 +99,18 @@ const rootLineHeight: CSSObject = {
   lineHeight: '1.15',
 };
 
+const visuallyHidden: CSSObject = {
+  position: 'absolute',
+  width: '1px',
+  height: '1px',
+  margin: '-1px',
+  border: 0,
+  padding: 0,
+  whiteSpace: 'nowrap',
+  clip: 'rect(0, 0, 0, 0)',
+  overflow: 'hidden',
+};
+
 export {
   grid,
   flex,
@@ -118,4 +130,5 @@ export {
   overflowHidden,
   overflowScroll,
   rootLineHeight,
+  visuallyHidden,
 };
