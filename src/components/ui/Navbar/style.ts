@@ -53,6 +53,10 @@ const itemWrap =
     boxShadow: 'none',
 
     '& > button': {
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
       padding: '2px',
       width: '60px',
       textDecoration: 'none',
@@ -65,16 +69,17 @@ const itemWrap =
           fill: isActive ? blue300 : gray350,
         },
       },
-    },
-    'button:focus': {
-      color: blue300,
-      boxShadow: 'none',
-    },
-    'button span': {
-      marginTop: '4px',
-    },
-    'button div': {
-      margin: '1px auto',
+
+      '&:focus': {
+        color: blue300,
+        boxShadow: 'none',
+      },
+      '& span': {
+        marginTop: '4px',
+      },
+      '& div': {
+        margin: '1px auto',
+      },
     },
   });
 

@@ -1,4 +1,5 @@
 import { CSSObject, Theme } from '@emotion/react';
+import theme from './theme';
 
 const grid: CSSObject = {
   display: 'grid',
@@ -111,6 +112,11 @@ const visuallyHidden: CSSObject = {
   overflow: 'hidden',
 };
 
+const sideGutter: CSSObject = {
+  paddingLeft: theme.size.gutter,
+  paddingRight: theme.size.gutter,
+};
+
 export {
   grid,
   flex,
@@ -131,4 +137,5 @@ export {
   overflowScroll,
   rootLineHeight,
   visuallyHidden,
+  sideGutter,
 };

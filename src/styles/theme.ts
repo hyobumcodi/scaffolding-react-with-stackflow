@@ -10,13 +10,16 @@ const layout: CSSObject = {
 const theme = {
   color: {
     primary: {
+      blue0: '#EEF4FF',
       blue100: '#3da4ff',
-      blue200: '#6396ff',
+      blue150: '#4A93FF',
+      blue200: '#2F5FDC',
       blue300: '#004FEC',
     },
     error: {
       red200: '#FFEBED',
       red350: '#FDC5C6',
+      red400: '#FF546C',
       red600: '#EB4852',
       red850: '#B5262B',
     },
@@ -36,6 +39,7 @@ const theme = {
     },
     gray: {
       gray0: '#FFFFFF',
+      gray50: '#F0F0F0',
       gray100: '#FCFCFC',
       gray150: '#F5F5F5',
       gray200: '#EFEFEF',
@@ -55,17 +59,28 @@ const theme = {
       gray900: '#111111',
       gray1000: '#000000',
     },
+    text: {
+      text0: '#2B395D',
+      text1: '#738DC2',
+      text25: '#363E52',
+      text50: '#3A3C53',
+      text75: '#727B8E',
+      text100: '#202020',
+    },
   },
   typography: {
     size: {
       heading1: '28px',
-      heading2: '22px',
-      heading3: '20px',
-      heading4: '18px',
+      heading2: '24px',
+      heading3: '22px',
+      heading4: '20px',
+      heading5: '18px',
       paragraph1: '16px',
       paragraph2: '14px',
       element1: '15px',
       element2: '13px',
+      element3: '12px',
+      element4: '11px',
     },
     weight: {
       bold: 700,
@@ -77,6 +92,7 @@ const theme = {
   shadows: {
     1: '0px 3px 16px 0px rgba(0, 0, 0, 0.20)',
     2: '0px -4px 4px rgba(0, 0, 0, 0.025)',
+    3: '2px 5px 20px 0px rgba(83, 90, 103, 0.10)',
   },
   grids: {
     layout1: {
@@ -97,6 +113,7 @@ const theme = {
     },
   },
   size: {
+    gutter: '24px',
     height: {
       header: '58px',
       navbar: '64px',

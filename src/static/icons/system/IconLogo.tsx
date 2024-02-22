@@ -7,6 +7,6 @@ const SVG = `
 </svg>
 `;
 
-const IconBell: React.FC = () => <div css={f.flex} dangerouslySetInnerHTML={{ __html: SVG }} />;
+const IconLogo: React.FC = () => <div css={f.flex} dangerouslySetInnerHTML={{ __html: SVG }} />;
 
-export default IconBell;
+export default IconLogo;

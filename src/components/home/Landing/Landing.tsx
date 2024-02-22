@@ -1,9 +1,9 @@
 import React from 'react';
-import { UiComponent } from 'components';
 import { useFlow } from 'stackflow';
-import { theme } from 'styles';
-import { title } from './style';
 import { useCheckSignin } from 'hooks';
+import { HeaderSection } from './headerSection';
+import { RequestPayment } from './requestPayment';
+import { RecommendTicket } from './recommendTicket';
 
 const Landing = () => {
   const { push } = useFlow();
@@ -17,13 +17,16 @@ const Landing = () => {
   const { isLoading } = useCheckSignin();
 
   return (
-    <main css={{ padding: '20px' }}>
-      <h1 css={title}>this is Landing page (before user loggedin)</h1>
-      <UiComponent.Divider color={theme.color.gray.gray400} css={{ margin: '10px auto' }} />
-      <button onClick={onClick}>내 이용권</button>
-      <UiComponent.Divider color={theme.color.gray.gray400} css={{ margin: '10px auto' }} />
-      <button onClick={onClickToRegister}>센터 등록</button>
-      {isLoading && <UiComponent.Loading isWhite opacity={1} />}
+    <main>
+      <HeaderSection />
+      <RequestPayment />
+      <RecommendTicket />
+      <HeaderSection />
+      <RequestPayment />
+      <RecommendTicket />
+      <HeaderSection />
+      <RequestPayment />
+      <RecommendTicket />
     </main>
   );
 };

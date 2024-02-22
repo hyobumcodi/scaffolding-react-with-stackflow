@@ -27,6 +27,7 @@ export const { Stack, activities, useFlow } = stackflow({
       theme: 'cupertino',
       appBar: {
         height: '58px',
+        borderSize: '0',
       },
     }),
     historySyncPlugin({
