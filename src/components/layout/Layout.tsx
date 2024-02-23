@@ -9,12 +9,12 @@ import { scrollable, wrapper } from './style';
 type PropOf<T> = T extends React.ComponentType<infer U> ? U : never;
 
 interface LayoutProps {
-  activeTab?: KeyOf<TypeActivities>;
+  activeTab?: KeyOf<TypeActivities> | false;
   appBar?: PropOf<typeof AppScreen>['appBar'];
   children: React.ReactNode;
 }
 
-const Layout: React.FC<LayoutProps> = ({ activeTab, appBar, children }) => {
+const Layout: React.FC<LayoutProps> = ({ activeTab = 'Home', appBar, children }) => {
   const { replace, defaultAppBar } = withDefaultAppBar();
   const navigate = React.useCallback((tab: KeyOf<TypeActivities>) => replace(tab, {}, { animate: false }), []);
 

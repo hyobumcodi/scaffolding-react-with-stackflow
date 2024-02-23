@@ -12,29 +12,26 @@ const wrap = [
   }: Theme) => ({
     paddingTop: '16px',
     paddingBottom: '24px',
-    backgoundColor: gray0,
+    backgroundColor: gray0,
   }),
 ];
 
 const title = [
   f.flexAlignCenter,
   ({
-    color: {
-      text: { text0, text25 },
-    },
     typography: {
-      size: { heading2 },
+      size: { heading5 },
       weight: { bold },
     },
   }: Theme): CSSObject => ({
-    fontSize: heading2,
-    fontWeight: bold,
-    lineHeight: '32px',
-    color: text0,
     marginBottom: '12px',
 
     b: {
-      color: text25,
+      color: '#363E52',
+      fontSize: heading5,
+      fontWeight: bold,
+      lineHeight: '28px',
+      letterSpacing: '-0.4px',
       marginLeft: '6px',
     },
   }),

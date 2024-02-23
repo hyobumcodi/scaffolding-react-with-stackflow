@@ -14,7 +14,7 @@ const RecommendTicket = () => {
   return (
     <div css={[wrap, { cursor: 'pointer' }]} onClick={onClickToRegister}>
       <h1 css={title}>
-        <IconRecommendTicket /> <b>결제 요청이 도착했어요!</b>
+        <IconRecommendTicket /> <b>추천 이용권</b>
       </h1>
       <div css={card_wrap}>
         <img src={mockProfile} alt="" />

@@ -1,14 +1,8 @@
 import { CSSObject, Theme } from '@emotion/react';
-import { DividerOrientationType, DividerThicknessType, SizeWithPercentType, SizeWithPxType } from 'types';
+import { DividerProps } from './Divider';
 
 const borderStyle =
-  (
-    orientation?: DividerOrientationType,
-    variant?: React.CSSProperties['borderColor'],
-    thickness?: DividerThicknessType,
-    size?: SizeWithPxType | SizeWithPercentType,
-    color?: string,
-  ) =>
+  ({ orientation, variant, thickness, size, color }: Omit<DividerProps, 'css'>) =>
   ({
     color: {
       gray: { gray200 },

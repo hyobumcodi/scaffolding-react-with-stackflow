@@ -12,24 +12,24 @@ const wrap = [
   }: Theme) => ({
     paddingTop: '8px',
     paddingBottom: '24px',
-    backgoundColor: gray0,
+    backgroundColor: gray0,
   }),
 ];
 
 const title = ({
   color: {
-    text: { text0 },
     primary: { blue300 },
   },
   typography: {
-    size: { heading2 },
+    size: { heading5 },
     weight: { bold },
   },
 }: Theme): CSSObject => ({
-  fontSize: heading2,
+  color: '#363E52',
+  fontSize: heading5,
   fontWeight: bold,
-  lineHeight: '32px',
-  color: text0,
+  lineHeight: '28px',
+  letterSpacing: '-0.4px',
   marginBottom: '16px',
 
   b: {

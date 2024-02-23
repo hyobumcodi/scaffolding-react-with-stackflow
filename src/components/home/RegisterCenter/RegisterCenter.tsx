@@ -10,6 +10,7 @@ const RegisterCenter = () => {
       appBar={{
         title: '센터 등록',
       }}
+      activeTab={false}
     >
       <main css={{ padding: '20px' }}>
         <h1 css={title}>this is 센터 등록 page</h1>

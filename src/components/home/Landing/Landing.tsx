@@ -1,19 +1,13 @@
 import React from 'react';
-import { useFlow } from 'stackflow';
 import { useCheckSignin } from 'hooks';
+import { UiComponent } from 'components';
 import { HeaderSection } from './headerSection';
 import { RequestPayment } from './requestPayment';
 import { RecommendTicket } from './recommendTicket';
+import { ReservedClass } from './reservedClass';
+import { MyTicket } from './myTicket';
 
 const Landing = () => {
-  const { push } = useFlow();
-
-  const onClick = () => {
-    push('MyTicket', {});
-  };
-
-  const onClickToRegister = () => push('RegisterCenter', {});
-
   const { isLoading } = useCheckSignin();
 
   return (
@@ -21,12 +15,9 @@ const Landing = () => {
       <HeaderSection />
       <RequestPayment />
       <RecommendTicket />
-      <HeaderSection />
-      <RequestPayment />
-      <RecommendTicket />
-      <HeaderSection />
-      <RequestPayment />
-      <RecommendTicket />
+      <ReservedClass />
+      <MyTicket />
+      {isLoading && <UiComponent.Loading isWhite opacity={1} />}
     </main>
   );
 };

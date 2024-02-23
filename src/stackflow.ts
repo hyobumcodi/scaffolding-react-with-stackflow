@@ -28,6 +28,7 @@ export const { Stack, activities, useFlow } = stackflow({
       appBar: {
         height: '58px',
         borderSize: '0',
+        borderColor: '#ffffff',
       },
     }),
     historySyncPlugin({

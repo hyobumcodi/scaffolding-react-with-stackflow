@@ -2,15 +2,15 @@ import { CSSObject, Theme } from '@emotion/react';
 
 const wrap = ({
   size: {
-    height: { header },
+    height: { header, navbar },
   },
 }: Theme): CSSObject => ({
   position: 'fixed',
   top: header,
   left: 0,
   right: 0,
-  bottom: 0,
-  zIndex: 3000,
+  bottom: navbar,
+  zIndex: 1000,
 });
 
 const backgroundCover =
@@ -37,7 +37,7 @@ const background = ({
   left: 0,
   top: header,
   right: 0,
-  bottom: 0,
+  bottom: navbar,
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'center',

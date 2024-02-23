@@ -9,7 +9,7 @@ import {
 } from 'types';
 import { borderStyle } from './style';
 
-interface Props extends React.HTMLAttributes<HTMLHRElement> {
+export interface DividerProps extends React.HTMLAttributes<HTMLHRElement> {
   orientation?: DividerOrientationType;
   variant?: React.CSSProperties['borderColor'];
   thickness?: DividerThicknessType;
@@ -18,10 +18,10 @@ interface Props extends React.HTMLAttributes<HTMLHRElement> {
   css?: Interpolation<Theme>;
 }
 
-function Divider(props: Props) {
+function Divider(props: DividerProps) {
   const { orientation = 'horizontal', variant = 'solid', thickness = 'thin', size = '100%', color, css } = props;
 
-  return <hr {...props} css={[borderStyle(orientation, variant, thickness, size, color), css]} />;
+  return <hr {...props} css={[borderStyle({ orientation, variant, thickness, size, color }), css]} />;
 }
 
 export default Divider;

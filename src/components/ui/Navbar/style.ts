@@ -6,7 +6,7 @@ const wrap: CSSObject = {
   left: 0,
   right: 0,
   height: '64px',
-  zIndex: 99,
+  zIndex: 4000,
 };
 
 const shadowWrap = ({
@@ -15,6 +15,7 @@ const shadowWrap = ({
   },
   shadows,
 }: Theme): CSSObject => ({
+  position: 'relative',
   height: '100%',
   margin: 'auto',
   alignItems: 'center',

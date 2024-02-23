@@ -9,6 +9,7 @@ const Alarm: ActivityComponentType = () => {
       appBar={{
         title: '알림',
       }}
+      activeTab={false}
     >
       <div>Hello this is Alarm Screen</div>
     </Layout>

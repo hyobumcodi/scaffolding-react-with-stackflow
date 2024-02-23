@@ -1,5 +1,5 @@
 import React from 'react';
-import { ActivityComponentType } from '@stackflow/react';
+import { type ActivityComponentType } from '@stackflow/react';
 
 import { Layout } from 'components/layout';
 import { CommunityComponent } from 'components';

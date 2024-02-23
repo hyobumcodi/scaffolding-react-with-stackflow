@@ -81,7 +81,7 @@ const reset = css`
   optgroup,
   select,
   textarea {
-    font-family: inherit;
+    font-family: 'Pretendard', 'AppleSDGothicNeo', 'AppleSDGothicNeo-Regular', 'Malgun Gothic', Helvetica, sans-serif;
     font-size: 100%;
     line-height: 1.15;
     margin: 0;
@@ -183,19 +183,19 @@ const reset = css`
 
   * {
     margin: 0;
-    font-family: $font-main;
+    font-family: 'Pretendard', 'AppleSDGothicNeo', 'AppleSDGothicNeo-Regular', 'Malgun Gothic', Helvetica, sans-serif;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     box-sizing: border-box;
   }
 
   html {
-    font-family: $font-main;
+    font-family: 'Pretendard', 'AppleSDGothicNeo', 'AppleSDGothicNeo-Regular', 'Malgun Gothic', Helvetica, sans-serif;
     font-size: $font-size-16;
   }
 
   body {
-    font-family: $font-main;
+    font-family: 'Pretendard', 'AppleSDGothicNeo', 'AppleSDGothicNeo-Regular', 'Malgun Gothic', Helvetica, sans-serif;
     color: $primary;
   }
 
