@@ -4,7 +4,7 @@ import { useFlow } from 'stackflow';
 import IconSearch from 'static/icons/system/IconSearch';
 import IconQRCode from 'static/icons/system/IconQRCode';
 import IconBack from 'static/icons/system/IconBack';
-import { wrap, title, btn_wrap, registCenter, mobileTicket, banner, bannerTextGroup, bannderIcon } from './style';
+import { wrap, title, btn_wrap, registCenter, mobileTicket, banner, bannerTextGroup, bannerIcon } from './style';
 
 const HeaderSection = () => {
   const { push } = useFlow();
@@ -36,7 +36,7 @@ const HeaderSection = () => {
           <p>바디필라테스</p>
           <p>블랙라벨 블랙블랙 레깅스 1+1 반값특가!</p>
         </div>
-        <IconBack css={bannderIcon} />
+        <IconBack css={bannerIcon} />
       </div>
     </div>
   );

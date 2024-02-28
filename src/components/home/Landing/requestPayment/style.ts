@@ -7,18 +7,21 @@ const wrap = [
   f.flexColumn,
   ({
     color: {
-      gray: { gray0 },
+      primary: { white },
     },
   }: Theme) => ({
     paddingTop: '16px',
     paddingBottom: '24px',
-    backgroundColor: gray0,
+    backgroundColor: white,
   }),
 ];
 
 const title = [
   f.flexAlignCenter,
   ({
+    color: {
+      bluegray: { bluegray90 },
+    },
     typography: {
       size: { heading5 },
       weight: { bold },
@@ -27,7 +30,7 @@ const title = [
     marginBottom: '12px',
 
     b: {
-      color: '#363E52',
+      color: bluegray90,
       fontSize: heading5,
       fontWeight: bold,
       lineHeight: '28px',
@@ -40,9 +43,14 @@ const title = [
 const card_wrap = [
   f.fullWidth,
   f.flexColumn,
-  ({ shadows }: Theme): CSSObject => ({
+  ({
+    color: {
+      sub: { gray_eaeaea },
+    },
+    shadows,
+  }: Theme): CSSObject => ({
     padding: '24px',
-    border: '1px solid #EAEAEA',
+    border: `1px solid ${gray_eaeaea}`,
     borderRadius: '8px',
     boxShadow: shadows[3],
   }),
@@ -62,8 +70,7 @@ const payment_info = [
   f.flexAlignCenter,
   ({
     color: {
-      text: { text1, text75 },
-      error: { red400 },
+      sub: { gray_738dc2, gray_3a3c53, red_ff546c },
     },
     typography: {
       size: { element2, heading5 },
@@ -87,7 +94,7 @@ const payment_info = [
       flexDirection: 'column',
 
       '& span:first-of-type': {
-        color: text1,
+        color: gray_738dc2,
         fontSize: element2,
         fontWeight: medium,
         lineHeight: '18px',
@@ -95,7 +102,7 @@ const payment_info = [
       },
 
       '& span:last-of-type': {
-        color: '#3A3C53',
+        color: gray_3a3c53,
         fontSize: heading5,
         fontWeight: bold,
         lineHeight: '28px',
@@ -115,7 +122,7 @@ const payment_info = [
       letterSpacing: '-0.2px',
 
       height: '26px',
-      color: red400,
+      color: red_ff546c,
       backgroundColor: 'rgba(255, 84, 108, 0.10)',
       display: 'flex',
       alignItems: 'center',
@@ -131,18 +138,19 @@ const resson_info = [
   f.flexAlignCenter,
   ({
     color: {
-      gray: { gray0 },
+      primary: { white },
+      bluegray: { bluegray80 },
     },
     typography: {
       size: { paragraph1 },
-      weight: { semibold },
+      weight: { medium },
     },
   }: Theme): CSSObject => ({
     marginTop: '12px',
-    color: '#4c5874',
-    backgroundColor: gray0,
+    color: bluegray80,
+    backgroundColor: white,
     fontSize: paragraph1,
-    fontWeight: semibold,
+    fontWeight: medium,
     lineHeight: '24px',
     letterSpacing: '-0.4px',
   }),
@@ -154,8 +162,7 @@ const bpay = [
   f.flexJustifyCenter,
   ({
     color: {
-      primary: { blue300 },
-      gray: { gray0 },
+      primary: { blue, white },
     },
     typography: {
       size: { paragraph1 },
@@ -164,8 +171,8 @@ const bpay = [
   }: Theme): CSSObject => ({
     height: '48px',
     borderRadius: '8px',
-    color: gray0,
-    backgroundColor: blue300,
+    color: white,
+    backgroundColor: blue,
 
     fontSize: paragraph1,
     fontWeight: bold,

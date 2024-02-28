@@ -66,14 +66,14 @@ const nowrap: CSSObject = {
 
 const resetButton = ({
   color: {
-    gray: { gray900 },
+    primary: { black },
   },
 }: Theme): CSSObject => ({
   appearance: 'none',
   border: 0,
   padding: 0,
   background: 'none',
-  color: gray900,
+  color: black,
   textAlign: 'left',
 });
 

@@ -5,10 +5,10 @@ const borderStyle =
   ({ orientation, variant, thickness, size, color }: Omit<DividerProps, 'css'>) =>
   ({
     color: {
-      gray: { gray200 },
+      gray: { gray100 },
     },
   }: Theme): CSSObject => ({
-    borderColor: color || gray200,
+    borderColor: color || gray100,
     borderStyle: variant,
     ...(orientation === 'horizontal'
       ? {

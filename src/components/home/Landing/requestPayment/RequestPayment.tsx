@@ -28,7 +28,7 @@ const RequestPayment = () => {
             </div>
             <p>D-7</p>
           </div>
-          <Divider color={theme.color.gray.gray300} />
+          <Divider color={theme.color.sub.gray_eaeaea} />
           <div css={resson_info}>
             <span>개인레슨</span>
             <span>·</span>

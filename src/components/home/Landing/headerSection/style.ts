@@ -7,34 +7,35 @@ const wrap = [
   f.flexColumn,
   ({
     color: {
-      gray: { gray0 },
+      primary: { white },
     },
   }: Theme) => ({
     paddingTop: '8px',
     paddingBottom: '24px',
-    backgroundColor: gray0,
+    backgroundColor: white,
   }),
 ];
 
 const title = ({
   color: {
-    primary: { blue300 },
+    primary: { blue },
+    sub: { gray_2b395d },
   },
   typography: {
-    size: { heading5 },
+    size: { heading2 },
     weight: { bold },
   },
 }: Theme): CSSObject => ({
-  color: '#363E52',
-  fontSize: heading5,
+  color: gray_2b395d,
+  fontSize: heading2,
   fontWeight: bold,
-  lineHeight: '28px',
+  lineHeight: '32px',
   letterSpacing: '-0.4px',
   marginBottom: '16px',
 
   b: {
     display: 'block',
-    color: blue300,
+    color: blue,
   },
 });
 
@@ -46,10 +47,11 @@ const registCenter = [
   f.flexJustifyCenter,
   ({
     color: {
-      text: { text100 },
+      primary: { black },
+      sub: { gray_f0f0f0 },
     },
     typography: {
-      size: { element3 },
+      size: { element4 },
       weight: { medium },
     },
   }: Theme): CSSObject => ({
@@ -57,10 +59,10 @@ const registCenter = [
     marginRight: '10px',
     padding: '0 12px',
     borderRadius: '8px',
-    border: '1px solid #F0F0F0',
+    border: `1px solid ${gray_f0f0f0}`,
 
-    color: text100,
-    fontSize: element3,
+    color: black,
+    fontSize: element4,
     fontWeight: medium,
     lineHeight: '14px',
     letterSpacing: '-0.2px',
@@ -77,8 +79,7 @@ const mobileTicket = [
   f.flexJustifyCenter,
   ({
     color: {
-      primary: { blue300 },
-      gray: { gray0 },
+      primary: { white, blue },
     },
     typography: {
       size: { element1 },
@@ -87,15 +88,14 @@ const mobileTicket = [
   }: Theme): CSSObject => ({
     height: '48px',
     borderRadius: '8px',
-    color: gray0,
-    backgroundColor: blue300,
-
-    fontSize: element1,
-    fontWeight: semibold,
-    lineHeight: '20px',
-    letterSpacing: '-0.2px',
+    backgroundColor: blue,
 
     span: {
+      color: white,
+      fontSize: element1,
+      fontWeight: semibold,
+      lineHeight: '20px',
+      letterSpacing: '-0.2px',
       marginLeft: '8px',
     },
   }),
@@ -106,49 +106,53 @@ const banner = [
   f.flexAlignCenter,
   ({
     color: {
-      primary: { blue0 },
+      sub: { gray_eef4ff },
     },
   }: Theme): CSSObject => ({
     justifyContent: 'space-between',
 
     height: '58px',
     padding: '0 20px',
-    backgroundColor: blue0,
+    backgroundColor: gray_eef4ff,
     borderRadius: '8px',
   }),
 ];
 
 const bannerTextGroup = ({
   color: {
-    primary: { blue200 },
-    text: { text50 },
+    sub: { blue_2f5fdc },
+    bluegray: { bluegray50 },
   },
   typography: {
     size: { element2, element3 },
-    weight: { bold },
+    weight: { medium },
   },
 }: Theme): CSSObject => ({
-  color: text50,
-  fontWeight: bold,
-
   'p:first-of-type': {
+    color: bluegray50,
     fontSize: element3,
+    fontWeight: medium,
+    lineHeight: '14px',
+    letterSpacing: '-0.2px',
   },
 
   'p:last-of-type': {
     marginTop: '2px',
 
-    color: blue200,
+    color: blue_2f5fdc,
     fontSize: element2,
+    fontWeight: medium,
+    lineHeight: '18px',
+    letterSpacing: '-0.2px',
   },
 });
 
-const bannderIcon = ({
+const bannerIcon = ({
   color: {
-    primary: { blue150 },
+    sub: { blue_4a93ff },
   },
 }: Theme): CSSObject => ({
-  '& svg': { width: '16px', height: '16px', transform: 'rotate(180deg)', '& path': { stroke: blue150 } },
+  '& svg': { width: '16px', height: '16px', transform: 'rotate(180deg)', '& path': { stroke: blue_4a93ff } },
 });
 
-export { wrap, title, btn_wrap, registCenter, mobileTicket, banner, bannerTextGroup, bannderIcon };
+export { wrap, title, btn_wrap, registCenter, mobileTicket, banner, bannerTextGroup, bannerIcon };

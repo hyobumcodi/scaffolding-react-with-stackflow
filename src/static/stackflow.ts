@@ -8,7 +8,7 @@ const stackflowOptions = {
     basicRendererPlugin(),
     basicUIPlugin({
       theme: 'cupertino',
-      backgroundColor: theme.color.gray.gray0,
+      backgroundColor: theme.color.primary.white,
       appBar: {
         height: '56px',
         backButton: {

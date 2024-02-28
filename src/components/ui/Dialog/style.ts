@@ -17,13 +17,13 @@ const backgroundCover =
   (opacity: number, isWhite: boolean) =>
   ({
     color: {
-      gray: { gray0, gray1000 },
+      primary: { white, black_all },
     },
     size: {
       height: { header, navbar },
     },
   }: Theme): CSSObject => ({
-    background: isWhite ? gray0 : gray1000,
+    background: isWhite ? white : black_all,
     opacity,
     height: `calc(100vh - ${header} - ${navbar})`,
   });

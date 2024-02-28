@@ -11,7 +11,7 @@ const wrap: CSSObject = {
 
 const shadowWrap = ({
   color: {
-    gray: { gray0 },
+    primary: { white },
   },
   shadows,
 }: Theme): CSSObject => ({
@@ -20,7 +20,7 @@ const shadowWrap = ({
   margin: 'auto',
   alignItems: 'center',
   maxWidth: '768px',
-  backgroundColor: gray0,
+  backgroundColor: white,
   borderRadius: '24px 24px 0 0',
   boxShadow: shadows[2],
 });
@@ -35,8 +35,8 @@ const itemWrap =
   (isActive: boolean) =>
   ({
     color: {
-      gray: { gray350 },
-      primary: { blue300 },
+      sub: { gray_b2bfd1 },
+      primary: { blue },
     },
     typography: {
       size: { element2 },
@@ -50,7 +50,7 @@ const itemWrap =
     height: '100%',
     textAlign: 'center',
     fontSize: element2,
-    color: gray350,
+    color: gray_b2bfd1,
     boxShadow: 'none',
 
     '& > button': {
@@ -62,17 +62,17 @@ const itemWrap =
       width: '60px',
       textDecoration: 'none',
       fontWeight: semibold,
-      color: isActive ? blue300 : 'inherit',
+      color: isActive ? blue : 'inherit',
       transition: 'color 0.4s',
 
       '& > div > svg': {
         '& > path, & > rect': {
-          fill: isActive ? blue300 : gray350,
+          fill: isActive ? blue : gray_b2bfd1,
         },
       },
 
       '&:focus': {
-        color: blue300,
+        color: blue,
         boxShadow: 'none',
       },
       '& span': {

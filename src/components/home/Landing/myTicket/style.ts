@@ -4,19 +4,26 @@ import { f } from 'styles';
 const wrap = [
   f.fullWidth,
   f.flexColumn,
-  {
+  ({
+    color: {
+      primary: { white },
+    },
+  }: Theme): CSSObject => ({
     paddingTop: '32px',
     paddingBottom: '24px',
-    backgroundColor: '#ffffff',
-  },
+    backgroundColor: white,
+  }),
 ];
 
-const headSection = [
+const head_section = [
   f.sideGutter,
   f.flex1,
   f.fullWidth,
   f.flexAlignCenter,
   ({
+    color: {
+      bluegray: { bluegray40 },
+    },
     typography: {
       size: { paragraph2 },
       weight: { medium },
@@ -32,7 +39,7 @@ const headSection = [
       display: 'flex',
       alignItems: 'center',
       justfyContent: 'center',
-      color: '#949DB2',
+      color: bluegray40,
       fontSize: paragraph2,
       fontWeight: medium,
       lineHeight: '20px',
@@ -44,13 +51,17 @@ const headSection = [
 const title = [
   f.flexAlignCenter,
   ({
+    color: {
+      primary: { purple },
+      bluegray: { bluegray90 },
+    },
     typography: {
       size: { heading5 },
       weight: { bold },
     },
   }: Theme): CSSObject => ({
     span: {
-      color: '#363E52',
+      color: bluegray90,
       fontSize: heading5,
       fontWeight: bold,
       lineHeight: '28px',
@@ -58,7 +69,7 @@ const title = [
       marginLeft: '6px',
 
       b: {
-        color: '#7C5BFF',
+        color: purple,
         marginLeft: '4px',
       },
     },
@@ -70,11 +81,11 @@ const tickets_wrap = [
   f.flexColumn,
   ({
     color: {
-      primary: { blue300 },
+      primary: { blue },
     },
   }: Theme): CSSObject => ({
     padding: '24px',
-    backgroundColor: blue300,
+    backgroundColor: blue,
   }),
 ];
 
@@ -82,7 +93,8 @@ const info_wrap = [
   f.flexAlignCenter,
   ({
     color: {
-      gray: { gray0 },
+      primary: { white },
+      sub: { green_63ffab },
     },
     typography: {
       size: { paragraph1, element3 },
@@ -96,7 +108,7 @@ const info_wrap = [
     },
 
     '& span': {
-      color: gray0,
+      color: white,
       fontSize: paragraph1,
       fontWeight: semibold,
       lineHeight: '24px',
@@ -105,7 +117,7 @@ const info_wrap = [
     },
 
     '& p': {
-      color: '#63FFAB',
+      color: green_63ffab,
       fontSize: element3,
       fontWeight: semibold,
       height: '24px',
@@ -126,37 +138,45 @@ const card_wrap = [
   f.flexColumn,
   ({
     color: {
-      gray: { gray0 },
+      primary: { white },
     },
   }: Theme): CSSObject => ({
     justifyContent: 'space-between',
-    padding: '16px 20px',
-    backgroundColor: gray0,
+    backgroundColor: white,
     borderRadius: '8px',
-    boxShadow: '1px 2px 10px 0px rgba(47, 51, 65, 0.03)',
+    overflow: 'hidden',
   }),
 ];
 
-const times = [
+const card_top = [
+  f.fullWidth,
+  f.flexColumn,
+  {
+    padding: '20px',
+  },
+];
+
+const package_info = [
   f.flexAlignCenter,
   ({
     color: {
-      primary: { blue300 },
+      bluegray: { bluegray50 },
     },
     typography: {
       size: { paragraph2 },
-      weight: { semibold },
+      weight: { medium },
     },
   }: Theme): CSSObject => ({
-    marginBottom: '8px',
+    justifyContent: 'space-between',
+    marginBottom: '9.5px',
 
-    '& span': {
-      color: blue300,
+    '& > div > span': {
+      color: bluegray50,
       fontSize: paragraph2,
-      fontWeight: semibold,
-      lineHeight: '20px',
+      fontWeight: medium,
+      lineHeight: '18px',
       letterSpacing: '-0.2px',
-      marginRight: '6px',
+      marginRight: '2px',
     },
   }),
 ];
@@ -164,25 +184,42 @@ const times = [
 const lesson_name = [
   f.flexColumn,
   ({
+    color: {
+      primary: { black },
+    },
     typography: {
-      size: { paragraph1, paragraph2 },
-      weight: { medium, semibold },
+      size: { heading5 },
+      weight: { bold },
     },
   }: Theme): CSSObject => ({
-    marginBottom: '12px',
+    paddingRight: '50px',
+    marginBottom: '8px',
 
-    '& span:first-of-type': {
-      color: '#202020',
-      fontSize: paragraph1,
-      fontWeight: semibold,
-      lineHeight: '24px',
-      letterSpacing: '-0.4px',
+    color: black,
+    fontSize: heading5,
+    fontWeight: bold,
+    lineHeight: '24px',
+    letterSpacing: '-0.4px',
+  }),
+];
+
+const times = [
+  f.flexAlignCenter,
+  ({
+    color: {
+      primary: { blue },
     },
+    typography: {
+      size: { paragraph2 },
+      weight: { bold },
+    },
+  }: Theme): CSSObject => ({
+    marginBottom: '8px',
 
-    '& > div > span': {
-      color: '#404040',
+    '& span': {
+      color: blue,
       fontSize: paragraph2,
-      fontWeight: medium,
+      fontWeight: bold,
       lineHeight: '20px',
       letterSpacing: '-0.2px',
       marginRight: '6px',
@@ -190,45 +227,99 @@ const lesson_name = [
   }),
 ];
 
-const package_info = [
+const ticket_name = [
   f.flexAlignCenter,
   ({
+    color: {
+      sub: { gray_b0b0b0 },
+    },
     typography: {
-      size: { paragraph2 },
-      weight: { regular },
+      size: { element4 },
+      weight: { semibold },
+    },
+  }: Theme) => ({
+    marginRight: '50px',
+    justifyContent: 'center',
+
+    height: '26px',
+    color: gray_b0b0b0,
+    fontSize: element4,
+    fontWeight: semibold,
+    lineHeight: '14px',
+    letterSpacing: '-0.2px',
+    padding: '0 9px',
+    borderRadius: '3px',
+    border: '1px solid rgba(176, 176, 176, 0.40)',
+  }),
+];
+
+const card_bottom = [
+  f.flexAlignCenter,
+  ({
+    color: {
+      sub: { gray_f5f8fd },
     },
   }: Theme): CSSObject => ({
-    '& span': {
-      color: '#727B8E',
-      fontSize: paragraph2,
-      fontWeight: regular,
-      lineHeight: '20px',
+    justifyContent: 'space-between',
+    height: '54px',
+    padding: '0 20px',
+    backgroundColor: gray_f5f8fd,
+  }),
+];
+
+const labels = [
+  f.flexAlignCenter,
+  ({
+    color: {
+      primary: { blue, white },
+      sub: { gray_e1e9f5 },
+    },
+    typography: {
+      size: { element3 },
+      weight: { semibold },
+    },
+  }: Theme): CSSObject => ({
+    gap: '8px',
+
+    '& > span': {
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      borderRadius: '50px',
+      border: `1px solid ${gray_e1e9f5}`,
+      height: '30px',
+      padding: '0 10px',
+      backgroundColor: white,
+      color: blue,
+      fontSize: element3,
+      fontWeight: semibold,
+      lineHeight: '14px',
       letterSpacing: '-0.2px',
     },
   }),
 ];
 
-const btn = [
-  f.flexAlignCenter,
-  ({
-    typography: {
-      size: { element2 },
-      weight: { semibold },
-    },
-  }: Theme) => ({
-    justifyContent: 'center',
+const bannerIcon = ({
+  color: {
+    sub: { blue_83a7e1 },
+  },
+}: Theme): CSSObject => ({
+  '& svg': { width: '20px', height: '20px', transform: 'rotate(180deg)', '& path': { stroke: blue_83a7e1 } },
+});
 
-    height: '34px',
-    flexShrink: 0,
-    color: '#727B8E',
-    fontSize: element2,
-    fontWeight: semibold,
-    lineHeight: '20px',
-    letterSpacing: '-0.2px',
-    padding: '0 12px',
-    borderRadius: '6px',
-    border: '1px solid #EAEAEA',
-  }),
-];
-
-export { wrap, headSection, title, tickets_wrap, info_wrap, card_wrap, times, lesson_name, package_info, btn };
+export {
+  wrap,
+  head_section,
+  title,
+  tickets_wrap,
+  info_wrap,
+  card_wrap,
+  card_top,
+  times,
+  lesson_name,
+  package_info,
+  ticket_name,
+  card_bottom,
+  labels,
+  bannerIcon,
+};

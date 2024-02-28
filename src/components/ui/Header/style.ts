@@ -2,7 +2,7 @@ import { CSSObject, Theme } from '@emotion/react';
 
 const wrapper = ({
   color: {
-    gray: { gray0, gray250 },
+    primary: { white },
   },
 }: Theme): CSSObject => ({
   position: 'fixed',
@@ -11,8 +11,7 @@ const wrapper = ({
   right: 0,
   display: 'flex',
   height: '58px',
-  background: gray0,
-  borderBottom: `1px solid ${gray250}`,
+  background: white,
   padding: '0 20px',
   alignItems: 'center',
   justifyContent: 'space-between',

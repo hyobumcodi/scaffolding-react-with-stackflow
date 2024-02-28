@@ -7,18 +7,21 @@ const wrap = [
   f.flexColumn,
   ({
     color: {
-      gray: { gray0 },
+      primary: { white },
     },
   }: Theme) => ({
     paddingTop: '16px',
     paddingBottom: '24px',
-    backgroundColor: gray0,
+    backgroundColor: white,
   }),
 ];
 
 const title = [
   f.flexAlignCenter,
   ({
+    color: {
+      bluegray: { bluegray90 },
+    },
     typography: {
       size: { heading5 },
       weight: { bold },
@@ -27,7 +30,7 @@ const title = [
     marginBottom: '12px',
 
     b: {
-      color: '#363E52',
+      color: bluegray90,
       fontSize: heading5,
       fontWeight: bold,
       lineHeight: '28px',
@@ -40,15 +43,20 @@ const title = [
 const card_wrap = [
   f.fullWidth,
   f.flexAlignCenter,
-  ({ shadows }: Theme): CSSObject => ({
+  ({
+    color: {
+      sub: { gray_eaeaea },
+    },
+    shadows,
+  }: Theme): CSSObject => ({
     padding: '16px',
-    border: '1px solid #EAEAEA',
+    border: `1px solid ${gray_eaeaea}`,
     borderRadius: '8px',
     boxShadow: shadows[3],
 
     '& img': {
-      width: '118px',
-      height: '118px',
+      width: '36%',
+      aspectRatio: '1 / 1',
       borderRadius: '8px',
       marginRight: '12px',
     },
@@ -66,6 +74,9 @@ const info_wrap = [
 const package_badge = [
   f.flexAlignCenter,
   ({
+    color: {
+      bluegray: { bluegray80 },
+    },
     typography: {
       size: { element4 },
       weight: { regular },
@@ -78,7 +89,7 @@ const package_badge = [
     },
 
     '& p': {
-      color: '#4C5874',
+      color: bluegray80,
       fontSize: element4,
       fontWeight: regular,
       lineHeight: '14px',
@@ -88,6 +99,9 @@ const package_badge = [
 ];
 
 const package_name = ({
+  color: {
+    primary: { black },
+  },
   typography: {
     size: { paragraph1 },
     weight: { medium },
@@ -95,7 +109,7 @@ const package_name = ({
 }: Theme): CSSObject => ({
   marginBottom: '24px',
 
-  color: '#202020',
+  color: black,
   fontSize: paragraph1,
   fontWeight: medium,
   lineHeight: '20px',
@@ -105,25 +119,29 @@ const package_name = ({
 const package_price = [
   f.flexAlignCenter,
   ({
+    color: {
+      primary: { blue },
+      bluegray: { bluegray40 },
+    },
     typography: {
       size: { paragraph1, element2 },
-      weight: { semibold, bold },
+      weight: { medium, bold },
     },
   }: Theme): CSSObject => ({
     '& span:first-of-type': {
       marginRight: '4px',
 
-      color: '#004FEC',
+      color: blue,
       fontSize: paragraph1,
       fontWeight: bold,
-      lineHeight: '24x',
-      letterSpacing: '-0.2px',
+      lineHeight: '24px',
+      letterSpacing: '-0.4px',
     },
 
     '& span:last-of-type': {
-      color: '#949DB2',
+      color: bluegray40,
       fontSize: element2,
-      fontWeight: semibold,
+      fontWeight: medium,
       lineHeight: '21px',
       letterSpacing: '-0.2px',
       textDecorationLine: 'line-through',
