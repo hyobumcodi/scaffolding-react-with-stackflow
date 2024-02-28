@@ -14,6 +14,7 @@ export const { Stack, activities, useFlow } = stackflow({
     Home,
     Alarm: SharedComponent.Alarm,
     MyTicket: SharedComponent.MyTicket,
+    MyProfile: SharedComponent.MyProfile,
     PurchaseTicket: HomeComponent.PurchaseTicket,
     RegisterCenter: HomeComponent.RegisterCenter,
     BPay,
@@ -28,7 +29,7 @@ export const { Stack, activities, useFlow } = stackflow({
       appBar: {
         height: '58px',
         borderSize: '0',
-        borderColor: '#ffffff',
+        borderColor: 'white',
       },
     }),
     historySyncPlugin({
@@ -36,6 +37,7 @@ export const { Stack, activities, useFlow } = stackflow({
         Home: PATH.home,
         Alarm: PATH.alarm,
         MyTicket: PATH.myTicket,
+        MyProfile: PATH.me,
         RegisterCenter: PATH.registerCenter,
         BPay: PATH.bpay,
         Reservation: PATH.reservation,

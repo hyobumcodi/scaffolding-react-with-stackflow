@@ -239,9 +239,8 @@ const ticket_name = [
     },
   }: Theme) => ({
     marginRight: '50px',
-    justifyContent: 'center',
-
     height: '26px',
+    width: 'max-content',
     color: gray_b0b0b0,
     fontSize: element4,
     fontWeight: semibold,
@@ -250,6 +249,9 @@ const ticket_name = [
     padding: '0 9px',
     borderRadius: '3px',
     border: '1px solid rgba(176, 176, 176, 0.40)',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    whiteSpace: 'nowrap',
   }),
 ];
 

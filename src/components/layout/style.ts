@@ -11,14 +11,21 @@ const left = ({
 }: Theme): CSSObject => ({
   fontSize: paragraph1,
   fontWeight: semibold,
-  marginLeft: '8px',
+  paddingLeft: '16px',
 });
 
 const right: CSSObject = {
   display: 'grid',
   gridTemplateColumns: '24px 24px',
+  alignItems: 'center',
   gap: '16px',
-  marginRight: '8px',
+  paddingRight: '16px',
+
+  '& img': {
+    width: '24px',
+    height: '24px',
+    borderRadius: '50%',
+  },
 };
 
 const scrollable = (hasNavbar: boolean) => [

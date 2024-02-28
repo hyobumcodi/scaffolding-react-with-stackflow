@@ -4,6 +4,7 @@ const PATH = {
   bpay: '/bpay',
   community: '/community',
   schedule: '/schedule',
+  me: '/me',
   alarm: '/alarm',
   myTicket: '/my-ticket',
   registerCenter: 'register-center',

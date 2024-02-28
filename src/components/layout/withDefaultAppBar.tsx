@@ -1,9 +1,9 @@
 import React from 'react';
 import { useFlow } from 'stackflow';
 
-import IconBell from 'static/icons/system/IconBell';
+import IconBellActive from 'static/icons/system/IconBellActive';
 import IconLogo from 'static/icons/system/IconLogo';
-import IconDefaultProfile from 'static/icons/system/IconDefaultProfile';
+import mockProfile from 'static/img/mocks/mock3.png';
 import { left, right } from './style';
 
 const withDefaultAppBar = () => {
@@ -17,8 +17,8 @@ const withDefaultAppBar = () => {
 
   const appBarRight = () => (
     <div css={right}>
-      <IconBell onClick={() => push('Alarm', {})} />
-      <IconDefaultProfile />
+      <IconBellActive onClick={() => push('Alarm', {})} />
+      <img src={mockProfile} alt="" onClick={() => push('MyProfile', {})} />
     </div>
   );
 
