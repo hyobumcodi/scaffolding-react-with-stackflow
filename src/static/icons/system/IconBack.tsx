@@ -7,8 +7,8 @@ const SVG = `
 </svg>
 `;
 
-const IconBell: React.FC<{ onClick?: VoidFunction; className?: string }> = ({ onClick, className }) => (
+const IconBack: React.FC<{ onClick?: VoidFunction; className?: string }> = ({ onClick, className }) => (
   <div css={[f.flex]} className={className} onClick={onClick} dangerouslySetInnerHTML={{ __html: SVG }} />
 );
 
-export default IconBell;
+export default IconBack;

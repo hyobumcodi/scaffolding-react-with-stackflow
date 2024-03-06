@@ -144,6 +144,10 @@ const theme = {
       navbar: '64px',
     },
   },
+  zIndex: {
+    overlay: 100,
+    backdrop: 100,
+  },
 } as const;
 
 export default theme;

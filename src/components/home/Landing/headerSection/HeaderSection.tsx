@@ -1,14 +1,15 @@
-import React from 'react';
+import React, { useReducer } from 'react';
 import { useFlow } from 'stackflow';
 
 import IconSearch from 'static/icons/system/IconSearch';
 import IconQRCode from 'static/icons/system/IconQRCode';
 import IconBack from 'static/icons/system/IconBack';
 import { wrap, title, btn_wrap, registCenter, mobileTicket, banner, bannerTextGroup, bannerIcon } from './style';
+import { MobileTicketBottomSheet } from '../bottomSheet';
 
 const HeaderSection = () => {
   const { push } = useFlow();
-
+  const [show, toggle] = useReducer((c) => !c, false);
   const onClickToRegister = () => push('RegisterCenter', {});
 
   return (
@@ -21,7 +22,7 @@ const HeaderSection = () => {
           <IconSearch />
           <span>센터등록</span>
         </button>
-        <button css={mobileTicket}>
+        <button css={mobileTicket} onClick={toggle}>
           <IconQRCode />
           <span>모바일 회원증</span>
         </button>
@@ -38,6 +39,7 @@ const HeaderSection = () => {
         </div>
         <IconBack css={bannerIcon} />
       </div>
+      <MobileTicketBottomSheet isShowing={show} onClose={toggle} />
     </div>
   );
 };
