@@ -2,7 +2,7 @@ name: FE-BPay CI/CD Test
 on:
   push:
     branches:
-      - main
+      - preview
 
 jobs:
   cd:
