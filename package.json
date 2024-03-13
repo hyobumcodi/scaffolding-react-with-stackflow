@@ -78,6 +78,7 @@
     "@stackflow/plugin-renderer-basic": "^1.1.8",
     "@stackflow/react": "^1.1.8",
     "@vercel/analytics": "^1.2.2",
+    "@vercel/speed-insights": "^1.0.10",
     "react-spring-bottom-sheet": "^3.4.1"
   }
 }
