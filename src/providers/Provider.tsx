@@ -3,12 +3,14 @@ import { ThemeProvider, Global } from '@emotion/react';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import { store, persistor } from 'stores';
+import { Analytics } from '@vercel/analytics/react';
 import { theme, global } from 'styles';
 import QueryProvider from './QueryProvider';
 
 function AppProvider({ children }: PropsWithChildren) {
   return (
     <>
+      <Analytics />
       <Global styles={global} />
       <ThemeProvider theme={theme}>
         <Provider store={store}>
