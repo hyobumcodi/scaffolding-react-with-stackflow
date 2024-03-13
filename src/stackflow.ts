@@ -9,7 +9,7 @@ import { HomeComponent, SharedComponent } from 'components';
 import { PATH } from 'data';
 
 export const { Stack, activities, useFlow } = stackflow({
-  transitionDuration: 350,
+  transitionDuration: 300,
   activities: {
     Home,
     Alarm: SharedComponent.Alarm,
